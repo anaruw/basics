@@ -1,11 +1,10 @@
 package ru.netology.service;
 
-import org.testng.annotations.Test;
 import static org.testng.Assert.*;
 
 public class CashbackHackServiceTest {
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @org.testng.annotations.Test(expectedExceptions = RuntimeException.class)
     public void testRemainWithNegativeAmount() {
 
         CashbackHackService service = new CashbackHackService();
@@ -14,7 +13,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
     }
 
-    @Test(expectedExceptions = RuntimeException.class)
+    @org.testng.annotations.Test(expectedExceptions = RuntimeException.class)
     public void testRemainWithZeroAmount() {
 
         CashbackHackService service = new CashbackHackService();
@@ -23,7 +22,7 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void testRemainWithAmountMultipleOfBoundary() {
 
         CashbackHackService service = new CashbackHackService();
@@ -35,7 +34,7 @@ public class CashbackHackServiceTest {
         assertEquals(actual, expected);
     }
 
-    @Test
+    @org.testng.annotations.Test
     public void testRemainWithAmountNonMultipleOfBoundary() {
 
         CashbackHackService service = new CashbackHackService();
